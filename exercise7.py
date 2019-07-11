@@ -1,24 +1,40 @@
-print("How far did person 1 run (in metres)?")
-distance1 = float(input())
-print("How long (in minutes) did person 1 run take to run {} metres?".format(distance1))
-mins1 = float(input())
+def dist_time (runner):
+    print(f"How far did person {runner} run (in metres)?")
+    distance = float(input())
+    
+    print(f"How long (in minutes) did person {runner} run take to run {distance} metres?")
+    mins = float(input())
+    secs = mins * 60
+    speed = distance / secs
 
-print("How far did person 2 run (in metres)?")
-distance2 = float(input())
-print("How long (in minutes) did person 2 run take to run {} metres?".format(distance2))
-mins2 = float(input())
+    return distance
 
-print("How far did person 3 run (in metres)?")
-distance3 = float(input())
-print("How long (in minutes) did person 3 run take to run {} metres?".format(distance3))
-mins3 = float(input())
+speed1 = dist_time(1)
+speed2 = dist_time(2)
+speed3 = dist_time(3)
+#--------------------------------------------------------------------------------------------------------
 
-secs1 = mins1 * 60
-speed1 = distance1/secs1
-secs2 = mins2 * 60
-speed2 = distance2/secs2
-secs3 = mins3 * 60
-speed3 = distance3/secs3
+# # print("How far did person 1 run (in metres)?")
+# distance1 = dist_time(1) #float(input())
+# print("How long (in minutes) did person 1 run take to run {} metres?".format(distance1))
+# mins1 = float(input())
+
+# # print("How far did person 2 run (in metres)?")
+# distance2 = dist_time(2) #float(input())
+# print("How long (in minutes) did person 2 run take to run {} metres?".format(distance2))
+# mins2 = float(input())
+
+# # print("How far did person 3 run (in metres)?")
+# distance3 = dist_time (3) #float(input())
+# print("How long (in minutes) did person 3 run take to run {} metres?".format(distance3))
+# mins3 = float(input())
+
+# secs1 = mins1 * 60
+# speed1 = distance1/secs1
+# secs2 = mins2 * 60
+# speed2 = distance2/secs2
+# secs3 = mins3 * 60
+# speed3 = distance3/secs3
 
 if speed3 > speed2 and speed3 > speed1:
   print("Person 3 was the fastest at {} m/s".format(speed3))
